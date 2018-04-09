@@ -1,0 +1,33 @@
+<ion-card [@stateAnimation]="expanded" >
+    <img [src]="item.imageurl" />
+
+    <ion-card-content>
+        <ion-card-title class="title-name">
+            {{item.name}}
+        </ion-card-title>
+        <p>
+            {{item.descp}}
+        </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+        <ion-col>
+            <button ion-button clear small color="danger" icon-start>
+                <ion-icon name='ios-star-outline'></ion-icon>
+                Favorito
+            </button>
+        </ion-col>
+        <ion-col text-center>
+            <button (click)="viewDetails()" ion-button clear small color="danger" icon-start>
+                <ion-icon name='eye'></ion-icon>
+                Ver
+            </button>
+        </ion-col>
+        <ion-col text-right>
+            <button ion-button clear small color="danger" icon-start>
+                <ion-icon name='share-alt'></ion-icon>
+                Compartir
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-card>

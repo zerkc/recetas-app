@@ -1,0 +1,14 @@
+comp-recipientList {
+    display: flex;
+    flex:1;
+    ul{
+        flex:1;
+        margin: 0px;
+        padding: 0px;
+        overflow: auto;
+        background: #888888;
+    }
+    ion-searchbar{
+        position: absolute;
+    }
+}

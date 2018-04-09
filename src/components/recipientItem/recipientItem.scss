@@ -1,0 +1,32 @@
+comp-recipientitem {
+    ion-card{
+        opacity: 0;
+    }
+    li{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        box-shadow: 1px 3px 5px black;
+        min-height:80px;
+        max-height:80px;
+        background: #fff
+    }
+    div{
+        flex:1;
+        flex-direction: column;
+    }
+    .padding{
+        padding: 5px;
+    }
+    .clicked{
+        animation: blinkEffect 600ms;
+    }
+    .title{
+        font-size: 18px;
+    }
+    @keyframes blinkEffect {
+        0%   {transform: scale(1);}
+        50%  {transform: scale(1.1);}
+        100% {transform: scale(1);}
+    }
+}

@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Recetas
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-img [src]="item.imageurl"></ion-img>
+    <ion-card-content>
+        <ion-card-title class="title-name">
+            {{item.name}}
+        </ion-card-title>
+        <ion-card-content>
+            {{item.descp}}
+        </ion-card-content>
+    </ion-card-content>
+    <ion-card-title class="subtitle-name">Ingredients</ion-card-title>
+    <ul class="ingredients">
+        <li *ngFor="let ingredient of item.ingredients">
+            {{ingredient.cant}} {{ingredient.content}}
+        </li>
+    </ul>
+    <ion-card-title class="subtitle-name">Preparacion</ion-card-title>
+    <ul class="preparation">
+        <li *ngFor="let step of preparations ; let i = index" (click)="checkPreparation(i)" >
+            <span [class.checked]="step.checked">{{i+1}}</span> {{step.content}}
+        </li>
+    </ul>
+</ion-content>
+<ion-footer>
+    <ion-row no-padding>
+        <ion-col>
+            <button ion-button clear small color="danger" icon-start>
+                <ion-icon name='ios-star-outline'></ion-icon>
+                Favorito
+            </button>
+        </ion-col>
+        <!--<ion-col>
+            <button ion-button clear small color="danger" icon-start>
+                <ion-icon name='text'></ion-icon>
+            </button>
+        </ion-col>-->
+        <ion-col text-center>
+            <button (click)="showSteps()" ion-button clear small color="danger" icon-start>
+                <ion-icon name='eye'></ion-icon>
+                Ver
+            </button>
+        </ion-col>
+        <ion-col text-right>
+            <button ion-button clear small color="danger" icon-start>
+                <ion-icon name='share-alt'></ion-icon>
+                Compartir
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

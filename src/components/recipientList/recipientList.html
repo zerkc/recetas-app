@@ -1,0 +1,9 @@
+<div>
+<ion-searchbar *ngIf="hasSearch" (ionInput)="onInput($event)"></ion-searchbar>
+<ul>
+    <comp-recipientitem 
+        *ngFor="let item of items" 
+        [item]="item"
+        ></comp-recipientitem>
+</ul>
+</div>

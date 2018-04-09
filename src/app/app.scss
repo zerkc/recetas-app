@@ -14,3 +14,21 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+div, .scroll-content{
+    display:flex;
+    flex-direction: column;
+}
+.swiper-wrapper{
+    flex-direction: row;
+}
+.title-name{
+    color:#F60;
+}
+.subtitle-name{
+    color:#fc3135;
+    padding-left: 10px;
+    font-size: 2.0rem;
+}
+.toolbar-background-md{
+    background-color: #fff;
+}

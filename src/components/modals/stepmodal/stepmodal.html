@@ -1,0 +1,19 @@
+<ion-content>
+    <ion-slides pager id="slides" style="background-color: white" (ionSlideDidChange)="slideChanged($event)">
+        <ion-slide *ngFor="let step of steps">
+            <h2>Preparando...</h2>
+            <ion-img src="assets/imgs/cocinando.jpg" class="img"></ion-img>
+            <h3 class="textSlide">{{step.content}}</h3>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
+<ion-footer>
+    <ion-row no-padding>
+        <ion-col text-center>
+            <button ion-button clear small color="danger" icon-start (click)="dismiss()">
+                <ion-icon name='close'></ion-icon>
+                Cerrar
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-footer>
